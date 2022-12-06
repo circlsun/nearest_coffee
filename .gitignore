@@ -4,6 +4,7 @@ __pycache__/
 *$py.class
 
 .vscode/
+map_caffes.html
 
 # C extensions
 *.so
