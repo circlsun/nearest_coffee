@@ -8,9 +8,6 @@ from flask import Flask
 from dotenv import load_dotenv
 
 
-FILE_NAME = "coffee.json"
-
-
 def fetch_coordinates(apikey, address):
     base_url = "https://geocode-maps.yandex.ru/1.x"
     response = requests.get(base_url,
@@ -32,7 +29,7 @@ def fetch_coordinates(apikey, address):
 
 
 def get_all_caffes():
-    with open(FILE_NAME, "r", encoding="CP1251") as file:
+    with open("coffee.json", "r", encoding="CP1251") as file:
         file_contents = file.read()
     return json.loads(file_contents)
 
